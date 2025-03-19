@@ -3,15 +3,17 @@ describe('login automatizado', () => {
     cy.visit('https://www.saucedemo.com/')
 
     // Preenche o login
-    cy.get('[data-test="username"]').type("standard_user")
-    cy.get('[data-test="password"]').type("secret_sauce")
+    cy.get('[data-test="username"]').type("standard_user").should("have.value", "standard_user");
+    cy.get('[data-test="password"]').type("secret_sauce").should("have.value", "secret_sauce");
     cy.get('[data-test="login-button"]').click()
 
      // Valida se o usuário foi redirecionado à homepage
     cy.url().should('eq', 'https://www.saucedemo.com/inventory.html')
+    cy.get('[data-test="title"]').should("have.text", "Products");
 
     // Seleciona um item para compra (Sauce Labs Backpack)
     cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
+    cy.get('[data-test="shopping-cart-badge"]').should("have.text", "1");
 
     // Clica no carrinho de compras
     cy.get('[data-test="shopping-cart-link"]').click()
