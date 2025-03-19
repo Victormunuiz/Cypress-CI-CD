@@ -7,7 +7,7 @@ describe('login automatizado', () => {
     cy.get('[data-test="password"]').type("secret_sauce")
     cy.get('[data-test="login-button"]').click()
 
- YBZ    // Valida se o usuário foi redirecionado à homepage
+     // Valida se o usuário foi redirecionado à homepage
     cy.url().should('eq', 'https://www.saucedemo.com/inventory.html')
 
     // Seleciona um item para compra (Sauce Labs Backpack)
