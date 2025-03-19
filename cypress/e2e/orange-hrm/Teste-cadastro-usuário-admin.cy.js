@@ -30,7 +30,7 @@ cy.get('.orangehrm-header-container > .oxd-button').click()
 
    cy.get(':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text--after > .oxd-icon').click()
    cy.get('.oxd-select-dropdown > :nth-child(2)').click()
-   cy.get(':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').should('have.text', 'Admin') //valida se o item admin foi selecionado corretamente.
+   cy.get(':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').should('have.text', 'teste erro') //valida se o item admin foi selecionado corretamente.
 
  //Employee Name preenche 
 
