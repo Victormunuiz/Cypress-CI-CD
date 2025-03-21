@@ -4,7 +4,7 @@ describe('API -Teste funcional de login', () => {
 
     cy.request({
         method: "POST" ,
-        url: "http://localhost:3000/login" ,
+        url: "https://serverest.dev/login" ,
         body: {
             "email": "fulano@qa.com",
             "password": "teste"
@@ -21,7 +21,7 @@ describe('API -Teste funcional de login', () => {
         
         cy.request({
             method: "POST" ,
-            url: "http://localhost:3000/login" ,
+            url: "https://serverest.dev/login" ,
             body: {
                 "email": "fulano@qa.com",
                 "password": "test1"
